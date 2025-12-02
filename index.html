@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeroBirthday: Manav & Ghost Bash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'spidey-blue': '#2368B8',
+              'spidey-red': '#D42029',
+              'ghost-black': '#131313',
+              'ghost-flame': '#FF4500',
+              'dark': '#0A0A0A',
+              'light': '#F5F5F5',
+            },
+            fontFamily: {
+              'comic': ['"Comic Neue"', 'cursive', 'sans-serif'],
+            },
+            boxShadow: {
+              'hero': '0 4px 15px rgba(0, 0, 0, 0.6)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0A0A0A;
+        font-family: 'Comic Neue', cursive, sans-serif;
+      }
+      .comic-border {
+        border: 3px solid #000;
+      }
+      @keyframes flame {
+        0% { text-shadow: 0 0 5px #FF4500; }
+        50% { text-shadow: 0 0 15px #FF4500, 0 0 20px #FF4500; }
+        100% { text-shadow: 0 0 10px #FF4500, 0 0 25px #FF4500, 0 0 35px #FF4500; }
+      }
+      .animate-flame {
+        animation: flame 2s infinite alternate;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/package/xlsx.mjs"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
